@@ -42,7 +42,7 @@ sdb-admin -y change-root-password --all --password "${INIT_PW}"
 sdb-admin -y bootstrap-aggregator --memsql-id ${MASTER_ID} --license "${LICENSE}"
 sdb-admin -y add-leaf --host 127.0.0.1 --port 3307 --password ${INIT_PW}
 
-sdb-admin -y update-config --all --set-global --key enable_external_functions --value on
+# sdb-admin -y update-config --all --set-global --key enable_external_functions --value on
 sdb-admin -y update-config --all --set-global --key http_api --value on
 
 # stop the nodes to ensure we have a clean image state
