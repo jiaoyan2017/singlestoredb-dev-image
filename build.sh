@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [[ -f .env ]]; then
+    source .env
+fi
+
 BOOTSTRAP_LICENSE=BDM0YTEwNGQ4OTUxYTRjYTFhMjc1YzhjMmE2MWE5YjU4AAAAAAAAAAAAAAIAAAAAAAQwNQIZAMURb7ioCarkucnnOz+gUGz1A86EIsktiQIYH5IbjcETJ0F+1MVdqE7+YLP7Sut4FIgbAA==
 
 IMAGE_REPO=nexus.viperbj.net
