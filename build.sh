@@ -11,11 +11,11 @@ if [ -z "${BOOTSTRAP_LICENSE-}" ]; then
     exit 1
 fi
 
-IMAGE_REPO=ghcr.io/singlestore-labs
+IMAGE_REPO=nexus.viperbj.net
 IMAGE_NAME=singlestoredb-dev
 
 docker build \
-    -t "${IMAGE_REPO}/${IMAGE_NAME}:local" \
+    -t "${IMAGE_REPO}/${IMAGE_NAME}:7.9" \
     --build-arg BOOTSTRAP_LICENSE=${BOOTSTRAP_LICENSE} \
     --build-arg CONFIG="$(cat config.json)" \
     .
